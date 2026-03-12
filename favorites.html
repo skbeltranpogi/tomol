@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abstract Art Gallery</title>
+    <title>Logic Gallery</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
@@ -131,5 +131,54 @@
     </div>
 
     <script src="script.js"></script>
+    
+    <!-- Floating Chatbot -->
+    <div class="chatbot-button" id="chatbotButton">
+        <div class="chatbot-icon">💬</div>
+    </div>
+
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <div class="chatbot-header-content">
+                <div class="chatbot-avatar">🤖</div>
+                <div class="chatbot-info">
+                    <h3>AI Assistant</h3>
+                    <span class="chatbot-status">Online</span>
+                </div>
+            </div>
+            <div class="chatbot-header-actions">
+                <button class="chatbot-trash" id="chatbotTrash" title="Clear chat history">🗑️</button>
+                <button class="chatbot-close" id="chatbotClose">✕</button>
+            </div>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="chatbot-message bot">
+                <div class="chatbot-message-avatar">🤖</div>
+                <div class="chatbot-message-content">
+                    <p>Hello! How may I help you?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-input-area">
+            <div class="reply-preview" id="replyPreview" style="display: none;">
+                <div class="reply-preview-content">
+                    <div class="reply-preview-icon">↩️</div>
+                    <div class="reply-preview-text">
+                        <div class="reply-preview-label">Replying to message</div>
+                        <div class="reply-preview-message" id="replyPreviewMessage"></div>
+                    </div>
+                </div>
+                <button class="reply-preview-close" onclick="closeReplyPreview()">✕</button>
+            </div>
+            <div>
+                <input type="text" id="chatbotInput" placeholder="Type a message..." />
+                <button id="chatbotSend">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
 </body>
 </html>

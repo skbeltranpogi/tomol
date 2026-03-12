@@ -1,6 +1,6 @@
-# Abstract Art Gallery
+# Logic Gallery
 
-A premium abstract art gallery website with interactive features.
+A premium logic gallery website with interactive features.
 
 ## Features
 

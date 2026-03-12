@@ -1,9 +1,9 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logic Gallery</title>
+    <title>AI Chat - GOD CODE</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
@@ -15,9 +15,10 @@
                 GOD CODE
             </div>
             <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="favorites.html">Favorites</a>
+                <a href="chatbot.html" class="active">AI Chat</a>
                 <a href="#" onclick="window.close()">Close</a>
             </div>
         </div>
@@ -25,13 +26,39 @@
 
     <div id="particles-js"></div>
     
-    <div class="home-content">
-        <h1>Welcome to Logic Gallery</h1>
-        <p>Explore and save your favorite logic artworks</p>
-        <a href="favorites.html" class="cta-button">View Favorites</a>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="chat-header-content">
+                <div class="ai-avatar">🤖</div>
+                <div class="chat-title">
+                    <h2>AI Assistant</h2>
+                    <p class="status">Powered by Gemini</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text" id="chatInput" class="chat-input" placeholder="Type your message..." />
+            <button id="sendBtn" class="send-btn">
+                <span>Send</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                </svg>
+            </button>
+        </div>
     </div>
 
     <script src="script.js"></script>
+    <script src="chatbot.js"></script>
     
     <!-- Floating Chatbot -->
     <div class="chatbot-button" id="chatbotButton">
@@ -79,7 +106,5 @@
             </div>
         </div>
     </div>
-
-    <script src="chatbot.js"></script>
 </body>
 </html>

@@ -76,7 +76,6 @@ function longerword() {
         alert("INVALID! Please input a valid second word.");
         return;
     }
-
     
     if (word1.length > word2.length) {
         alert(`The longer word is: ${word1}`);
@@ -224,4 +223,31 @@ function basicOperators() {
 
 function closee(){
     self.close();
+}
+
+let currentSlide = 0;
+let isTransitioning = false;
+const VISIBLE_CARDS = 1;
+const CARD_WIDTH = 500; // exact to hide previous fully
+
+function slideMembers(direction) {
+    if (isTransitioning) return;
+    
+    const carousel = document.querySelector('.members-carousel');
+    const cards = document.querySelectorAll('.member-card');
+    const totalCards = cards.length;
+    const maxSlide = Math.max(0, totalCards - VISIBLE_CARDS);
+    
+    currentSlide += direction;
+    currentSlide = Math.max(0, Math.min(currentSlide, maxSlide));
+    
+    const offset = -(currentSlide * CARD_WIDTH);
+    
+    isTransitioning = true;
+    carousel.style.transform = `translateX(${offset}px)`;
+    carousel.style.transition = 'transform 0.5s ease';
+    
+    setTimeout(() => {
+        isTransitioning = false;
+    }, 500);
 }

@@ -1,5 +1,6 @@
-// Gemini API Configuration (2026 Updated)
-const API_KEY = 'AIzaSyA312x2d8EKm-Ft34KOIh8UIrcYW9o9ESY'; // Replace with your actual API key
+// Gemini API Configuration
+// Get your API key from: https://makersuite.google.com/app/apikey
+const API_KEY = 'AIzaSyCDu-4OQT6XM-UYE1xqsRp9D1jG465Hw6I'; // Replace with your actual API key
 const API_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent';
 
 const chatbotButton = document.getElementById('chatbotButton');

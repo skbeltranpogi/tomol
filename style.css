@@ -157,14 +157,7 @@ body {
     gap: 30px;
 }
 
-.members-carousel {
-    display: flex;
-    overflow: hidden;
-    width: 500px;
-    gap: 0;
-    padding: 25px 25px;
-    position: relative;
-}
+.members-carousel {\n    display: flex;\n    overflow: hidden;\n    width: 450px;\n    height: 600px;\n    gap: 0;\n    padding: 0;\n    position: relative;\n}
 
 .member-card {
     min-width: 450px;
